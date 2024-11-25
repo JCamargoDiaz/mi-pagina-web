@@ -10,6 +10,7 @@ body {
   background-color: #f4f4f4;
   color: #333;
   animation: fadeIn 1s ease-in-out;
+  height: 100vh;
 }
 
 @keyframes fadeIn {
@@ -62,6 +63,7 @@ body {
   text-decoration: underline;
 }
 
+
 /* Contenedor principal */
 .container {
   max-width: 1100px;
@@ -111,20 +113,62 @@ p {
 }
 
 /* Redes sociales */
+.redes {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+}
+
+/* Contenedor principal */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Enlaces redes sociales */
 #github,
-#linkedin {
-  display: inline-block;
+#linkedin,
+#instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #333;
   color: white;
   padding: 10px 20px;
   margin: 5px;
   text-decoration: none;
   border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
 }
 
-#github:hover,
+/* Hover para enlaces */
+#github:hover {
+  background-color: #0a0a0a;
+  transform: scale(1.03);
+}
+
 #linkedin:hover {
-  background-color: #555;
+  background-color: #0077b5;
+  transform: scale(1.03);
+}
+
+#instagram:hover {
+  background-color: #e1306c;
+  transform: scale(1.03);
+}
+
+/* Íconos redes */
+a svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  margin-right: 8px;
 }
 
 /* Lista de hobbies */
@@ -168,46 +212,67 @@ p {
 }
 
 /* Formulario de contacto */
-form {
-  display: flex;
-  flex-direction: column;
-  width: 800px;
+.form-container {
+  max-width: 800px;
   margin: auto;
-  margin-top: 10px;
+  padding: 20px;
 }
 
-form label {
-  margin-bottom: 0px;
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-form input,
-form textarea {
-  padding: 12px;
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+.form-group button {
+  width: 100%;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-
+  font-size: 14px;
 }
 
-form button {
-  width: 250px;
-  height: 40px;
-  margin: 0 auto;
+.form-group button {
   background-color: #333;
   color: white;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-form button:hover {
-  background-color: #555;
+.form-group button:hover {
+  background-color: black;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
 
 /* Footer */
 #footer {
   text-align: center;
-  margin-top: 40px;
   background-color: #333;
   color: white;
-  padding: 20px;
+  padding: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
